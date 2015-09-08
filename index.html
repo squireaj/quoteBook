@@ -27,7 +27,7 @@
 <input ng-model= "searchQuote" class="form-control" placeholder="Find a Quote" ng-show ="!myShow">
 </br>
 <ul>
-	<li ng-repeat="data in datas | filter: searchQuote" >
+	<li ng-repeat="data in datas track by $index | filter: searchQuote" >
 		<h3>Quote:</h3> "{{data.text}}", <h5>By:</h5> {{data.author}} <i class="glyphicon glyphicon-remove" ng-click="removePost()"></i>
 	</li>	
 </ul>
